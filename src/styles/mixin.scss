@@ -1,0 +1,58 @@
+@import 'styles/constants.scss';
+
+// 滚动条
+@mixin scrollbar(
+    $width: 4px,
+    $height: 4px,
+    $thumbcolor: $Primary-color,
+    $trackcolor: $Primary-color
+) {
+    &::-webkit-scrollbar {
+        display: block;
+        width: $width;
+        height: $height;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $thumbcolor;
+    }
+    &::-webkit-scrollbar-track {
+        background: $trackcolor;
+    }
+    &::-moz-scrollbar {
+        display: block;
+        width: $width;
+        height: $height;
+    }
+    &::-moz-scrollbar-thumb {
+        background: $thumbcolor;
+    }
+    &::-moz-scrollbar-track {
+        background: $trackcolor;
+    }
+}
+// 清除浮动
+@mixin clearfix {
+    zoom: 1;
+    &::before,
+    &::after {
+        display: table;
+        content: '';
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+// 文本多余剪切...
+@mixin text-ellipsis {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// 文本尺寸
+@mixin size($width: 0, $height: 4px) {
+    width: $width;
+    height: $height;
+}
