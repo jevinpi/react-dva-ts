@@ -9,6 +9,13 @@ const HappyPack = require('happypack');
 if(process.env.NODE_ENV === 'production') process.env.GENERATE_SOURCEMAP = "false";
 const rewiredMap = () => config => {
     config.devtool = config.mode === 'development' ? 'cheap-module-source-map' : false;
+    const loaders = config.module.rules.find(rule => Array.isArray(rule.oneOf)).oneOf;
+    loaders[5].use.push({
+        loader: 'sass-resources-loader',
+        options: {
+            resources: path.resolve(__dirname, 'src/styles/index.scss')
+        }
+    })
     return config;
 };
 
