@@ -3,12 +3,8 @@
     "stylelint-config-standard",
     "stylelint-config-prettier"
   ],
-  "plugins": [
-    "stylelint-scss" 
-  ],
+  "plugins": [],
   "rules": {
-    "scss/dollar-variable-pattern": "^",
-    "scss/selector-no-redundant-nesting-selector": true,
     "comment-empty-line-before": null,
     "declaration-empty-line-before": null,
     "function-comma-newline-after": null,
