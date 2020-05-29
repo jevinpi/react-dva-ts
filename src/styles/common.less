@@ -1,10 +1,8 @@
-@import './mixin.scss';
 /* 清除样式权重高于antd */
 html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    @include scrollbar();
     body,
     ol,
     ul,
@@ -126,41 +124,4 @@ textarea {
     -moz-border-radius: 0;
     padding: 0;
     margin: 0;
-}
-
-// 透明度渐变
-.opacity {
-    -webkit-animation: opacity 0.3s linear;
-    animation: opacity 0.3s linear;
-}
-@-webkit-keyframes opacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes opacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-// 清除浮动
-.clearfloat {
-    zoom: 1;
-}
-.clearfloat:after {
-    display: block;
-    clear: both;
-    content: '';
-    visibility: hidden;
-    height: 0;
-}
-// 居中
-.center {
-    margin: 0 auto;
 }

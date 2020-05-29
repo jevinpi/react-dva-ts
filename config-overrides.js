@@ -6,16 +6,9 @@ const HappyPack = require('happypack');
 /**
  * 生产环境取消map
  */
-if(process.env.NODE_ENV === 'production') process.env.GENERATE_SOURCEMAP = "false";
+if (process.env.NODE_ENV === 'production') process.env.GENERATE_SOURCEMAP = "false";
 const rewiredMap = () => config => {
     config.devtool = config.mode === 'development' ? 'cheap-module-source-map' : false;
-    const loaders = config.module.rules.find(rule => Array.isArray(rule.oneOf)).oneOf;
-    loaders[5].use.push({
-        loader: 'sass-resources-loader',
-        options: {
-            resources: path.resolve(__dirname, 'src/styles/index.scss')
-        }
-    })
     return config;
 };
 
@@ -50,6 +43,7 @@ const HappyPackPlugin = new HappyPack({
     loaders: ['babel-loader?cacheDirectory'],
     threadPool: happyThreadPool
 })
+
 
 module.exports = {
     webpack: override(

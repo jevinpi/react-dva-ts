@@ -1,17 +1,13 @@
 import React from 'react';
-import { connect } from 'dva';
 import { Link } from 'dva/router';
+import './detail.less';
 function DetailPage() {
     return (
-        <div>
+        <div id="detail">
             <h2>详情页</h2>
             <Link to="/">回到主页</Link>
         </div>
     );
 }
 
-const mapStateToProps = () => {
-    return {};
-};
-
-export default connect(mapStateToProps)(DetailPage);
+export default DetailPage;

@@ -1,25 +1,13 @@
 /**
  *  使用dva进行改造
  */
-import 'styles/index.scss';
+import 'styles/index.less';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
+import RouteConfig from './config/route';
 
-import dva from 'dva';
-import routeConfig from './config/route';
-import appModel from './models/';
-const history = require('history').createBrowserHistory;
-
-const location = history();
-
-// dva实例
-const App = dva({
-    history: location,
-});
-App.model(appModel);
-
-App.router(routeConfig);
-
-App.start('#root');
+ReactDOM.render(<RouteConfig />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
