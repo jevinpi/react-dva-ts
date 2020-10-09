@@ -1,4 +1,4 @@
-# CityView &middot; [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+# React基础框架，通过docker进行部署 &middot; [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 
 该脚手架基于`create-react-app`，集成有以下框架/库：
