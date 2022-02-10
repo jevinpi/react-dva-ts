@@ -15,7 +15,7 @@
         "babel-plugin-import": "^1.12.0",
         "compression-webpack-plugin": "^3.0.0",
         "dva": "^2.4.1",
-        "node-sass": "^4.13.0",
+        "node-sass": "^7.0.0",
         "react": "^16.8.6",
         "react-beautiful-dnd": "^11.0.5",
         "react-color": "^2.17.3",
